@@ -25,7 +25,18 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <Button 
+        variant="outline" 
+        size="icon" 
+        className="fixed top-4 right-4 z-50"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      >
+        <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span className="sr-only">Toggle theme</span>
+      </Button>
+
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column - Photo and Contact */}
@@ -39,16 +50,6 @@ const Index = () => {
                 />
               </div>
               <div className="space-y-4">
-                <Button 
-                  variant="outline" 
-                  size="icon" 
-                  className="w-full"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                  <span className="sr-only">Toggle theme</span>
-                </Button>
                 <SocialLinks />
                 <div className="text-sm text-muted-foreground">
                   <p>Based in Rajkot, India</p>
@@ -56,7 +57,7 @@ const Index = () => {
                 </div>
                 <Button variant="outline" className="w-full" asChild>
                   <a 
-                    href="YOUR_RESUME_DRIVE_LINK_HERE" 
+                    href="https://docs.google.com/document/d/1j_K-Vj3oy82hYN9aO1069h7P4hs8S7Nnkvtb4JrqvX0/edit?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

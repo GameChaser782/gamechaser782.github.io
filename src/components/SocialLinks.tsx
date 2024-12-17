@@ -5,17 +5,17 @@ const SocialLinks = () => {
   const socialLinks = [
     {
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com",
+      href: "https://github.com/GameChaser782",
       label: "GitHub"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/harshit-upadhyay-57573a146/",
       label: "LinkedIn"
     },
     {
       icon: <Twitter className="w-5 h-5" />,
-      href: "https://twitter.com",
+      href: "https://twitter.com/GameChaser782",
       label: "Twitter"
     },
     {
