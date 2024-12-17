@@ -3,9 +3,16 @@ import ProjectCard from "@/components/ProjectCard";
 import { FileText, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const Index = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const projects = [
     {
@@ -23,6 +30,10 @@ const Index = () => {
   const techStack = [
     "Python", "Git", "Kubernetes", "Elastic", "Docker", "MySQL", "AWS"
   ];
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-background relative">
