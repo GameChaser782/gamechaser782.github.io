@@ -1,9 +1,12 @@
 import SocialLinks from "@/components/SocialLinks";
 import ProjectCard from "@/components/ProjectCard";
-import { FileText } from "lucide-react";
+import { FileText, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 
 const Index = () => {
+  const { theme, setTheme } = useTheme();
+  
   const projects = [
     {
       title: "Project 1",
@@ -22,7 +25,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column - Photo and Contact */}
@@ -36,6 +39,16 @@ const Index = () => {
                 />
               </div>
               <div className="space-y-4">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="w-full"
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                >
+                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
                 <SocialLinks />
                 <div className="text-sm text-muted-foreground">
                   <p>Based in Rajkot, India</p>
@@ -92,7 +105,7 @@ const Index = () => {
                   <p className="font-medium text-foreground">Fun Facts:</p>
                   <ul className="list-disc list-inside space-y-1">
                     <li>Grew up in Rajkot, India</li>
-                    <li>Huge fan of Harry Potter (watched whole series like >30 times)</li>
+                    <li>Huge fan of Harry Potter (watched whole series like &gt;30 times)</li>
                     <li>Went to IIT Bombay to interact with better minds than me</li>
                     <li>I am also highly enthusiast in finance. I do part time stock market also.</li>
                   </ul>
