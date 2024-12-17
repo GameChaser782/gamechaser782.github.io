@@ -20,7 +20,7 @@ const SocialLinks = () => {
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      href: "mailto:your.email@example.com",
+      href: "mailto:harshitu782002@gmail.com",
       label: "Email"
     }
   ];
