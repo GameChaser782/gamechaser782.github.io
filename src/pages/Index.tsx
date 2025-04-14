@@ -1,12 +1,10 @@
+
 import SocialLinks from "@/components/SocialLinks";
-import ProjectCard from "@/components/ProjectCard";
-import { FileText, Moon, Sun } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 const Index = () => {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // Avoid hydration mismatch
@@ -14,19 +12,6 @@ const Index = () => {
     setMounted(true);
   }, []);
   
-  const projects = [
-    {
-      title: "Project 1",
-      description: "A brief description of your first project and its impact.",
-      technologies: ["Python", "Docker", "AWS"]
-    },
-    {
-      title: "Project 2",
-      description: "Description of your second project highlighting key features.",
-      technologies: ["Python", "Kubernetes", "MySQL"]
-    }
-  ];
-
   const techStack = [
     "Python", "Git", "Kubernetes", "Elastic", "Docker", "MySQL", "AWS"
   ];
@@ -37,17 +22,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <Button 
-        variant="outline" 
-        size="icon" 
-        className="fixed top-4 right-4 z-50"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      >
-        <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-        <span className="sr-only">Toggle theme</span>
-      </Button>
-
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column - Photo and Contact */}
@@ -122,15 +96,6 @@ const Index = () => {
                     <li>I am also highly enthusiast in finance. I do part time stock market also.</li>
                   </ul>
                 </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Projects</h2>
-              <div className="grid gap-6 sm:grid-cols-2">
-                {projects.map((project) => (
-                  <ProjectCard key={project.title} {...project} />
-                ))}
               </div>
             </div>
           </div>
