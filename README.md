@@ -1,2 +1,1 @@
-# harshitupadhyay.github.io
-Personal website
+Portfolio website for Harshit Upadhyay
