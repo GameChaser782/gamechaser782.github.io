@@ -10,7 +10,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/gamechaser782.github.io/',
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: true,
