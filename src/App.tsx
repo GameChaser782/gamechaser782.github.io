@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Blogs from "./pages/Blogs";
+import Socials from "./pages/Socials";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/socials" element={<Socials />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

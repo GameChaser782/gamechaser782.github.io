@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -29,6 +28,7 @@ const Navigation = () => {
           <Link to="/" className="hover:text-primary transition-colors">Home</Link>
           <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
           <Link to="/blogs" className="hover:text-primary transition-colors">Blogs</Link>
+          <Link to="/socials" className="hover:text-primary transition-colors">Socials</Link>
           
           <Button 
             variant="outline" 
