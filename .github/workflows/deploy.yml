@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # ✅ Added environment block
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,4 +44,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
