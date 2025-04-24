@@ -11,6 +11,7 @@ const Navigation = () => {
   // Avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
+    setTheme('light');
   }, []);
 
   if (!mounted) {

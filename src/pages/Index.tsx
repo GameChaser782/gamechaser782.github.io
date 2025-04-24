@@ -1,4 +1,3 @@
-
 import SocialLinks from "@/components/SocialLinks";
 import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -59,10 +58,10 @@ const Index = () => {
           <div className="lg:col-span-2 space-y-12">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold text-foreground">Harshit Upadhyay</h1>
-              <p className="text-xl text-primary">🏦 AI Engineer</p>
+              <p className="text-xl dark:text-emerald-400 text-primary">🏦 AI Engineer</p>
               <div className="flex flex-wrap gap-2">
                 {techStack.map((tech) => (
-                  <span key={tech} className="bg-accent px-3 py-1 rounded-full text-sm">
+                  <span key={tech} className="bg-accent dark:text-emerald-300 px-3 py-1 rounded-full text-sm">
                     {tech}
                   </span>
                 ))}
