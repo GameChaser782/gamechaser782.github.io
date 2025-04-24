@@ -29,7 +29,7 @@ const Index = () => {
             <div className="sticky top-8">
               <div className="aspect-square rounded-xl overflow-hidden mb-6 shadow-paper">
                 <img
-                  src="/lovable-uploads/ebbd7122-75bd-45f8-9e4a-821fb867107e.png"
+                  src="/lovable-uploads/IMG-20220409-WA0027.jpg"
                   alt="Harshit Upadhyay"
                   className="w-full h-full object-cover"
                 />
