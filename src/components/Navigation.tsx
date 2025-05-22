@@ -28,8 +28,22 @@ const Navigation = () => {
         <div className="flex items-center gap-6">
           <Link to="/" className="hover:text-primary transition-colors">Home</Link>
           <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
-          <Link to="/blogs" className="hover:text-primary transition-colors">Blogs</Link>
-          <Link to="/socials" className="hover:text-primary transition-colors">Socials</Link>
+          <a 
+            href="https://harshitupadhyay.bearblog.dev/blog/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-primary transition-colors"
+          >
+            Blogs
+          </a>
+          <a 
+            href="https://bento.me/harshit782" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-primary transition-colors"
+          >
+            Socials
+          </a>
           
           <Button 
             variant="outline" 

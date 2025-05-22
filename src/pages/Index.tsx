@@ -21,32 +21,38 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
-      <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12 md:py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column - Photo and Contact */}
           <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <div className="aspect-square rounded-xl overflow-hidden mb-6 shadow-paper">
+            <div className="lg:sticky lg:top-8 space-y-6">
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
                   src="/lovable-uploads/IMG-20220409-WA0027.jpg"
                   alt="Harshit Upadhyay"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="space-y-4">
                 <SocialLinks />
-                <div className="text-sm text-muted-foreground">
-                  <p>Based in Rajkot, India</p>
-                  <p>Available for opportunities</p>
+                <div className="text-sm text-muted-foreground space-y-1">
+                  <p className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Based in Rajkot, India
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Available for opportunities
+                  </p>
                 </div>
-                <Button variant="outline" className="w-full" asChild>
+                <Button variant="outline" className="w-full group" asChild>
                   <a 
                     href="https://docs.google.com/document/d/1j_K-Vj3oy82hYN9aO1069h7P4hs8S7Nnkvtb4JrqvX0/edit?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <FileText className="w-4 h-4" />
+                    <FileText className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     View Resume
                   </a>
                 </Button>
@@ -55,44 +61,81 @@ const Index = () => {
           </div>
 
           {/* Right Column - Content */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="lg:col-span-2 space-y-8 md:space-y-12">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold text-foreground">Harshit Upadhyay</h1>
-              <p className="text-xl dark:text-emerald-400 text-primary">🏦 AI Engineer</p>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground">Harshit Upadhyay</h1>
+              <p className="text-lg sm:text-xl text-primary dark:text-blue-400">🏦 AI Engineer</p>
               <div className="flex flex-wrap gap-2">
                 {techStack.map((tech) => (
-                  <span key={tech} className="bg-accent dark:text-emerald-300 px-3 py-1 rounded-full text-sm">
+                  <span 
+                    key={tech} 
+                    className="bg-accent/80 dark:bg-accent/20 px-3 py-1 rounded-full text-sm
+                             text-foreground dark:text-blue-300 hover:bg-accent dark:hover:bg-accent/30 
+                             transition-colors duration-200"
+                  >
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">About Me</h2>
-              <div className="space-y-4 text-muted-foreground">
-                <p>💻 I use daily: .py, .sql, .cpp</p>
-                <p>🏫 I went to Indian Institute of Technology, Bombay for my B.Tech (2024)</p>
-                <p>💬 Talk to me about cricket, python (both of these are not any kind of insect or animals), silicon valley & startups</p>
-                <p>👯 We can connect to play some games of Chess ♟ or Valorant</p>
+            <div className="space-y-6">
+              <h2 className="text-2xl font-semibold border-b pb-2">About Me</h2>
+              <div className="space-y-6 text-muted-foreground">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <p className="flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">💻</span>
+                    I use daily: .py, .sql, .cpp
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">🏫</span>
+                    IIT Bombay (2024)
+                  </p>
+                </div>
                 
-                <div className="space-y-2">
-                  <p className="font-medium text-foreground">You would normally find me:</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Learning Coding</li>
-                    <li>Listening to Lofi songs</li>
-                    <li>Playing Valorant, cricket or snooker</li>
-                    <li>Scrolling through Instagram (I mean, who doesn't)</li>
+                <div className="space-y-4">
+                  <p className="flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">💬</span>
+                    Talk to me about cricket, python, silicon valley & startups
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">👯</span>
+                    We can connect to play some games of Chess ♟ or Valorant
+                  </p>
+                </div>
+                
+                <div className="space-y-3">
+                  <p className="font-medium text-foreground flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">🎯</span>
+                    You would normally find me:
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {["Learning Coding", "Listening to Lofi songs", "Playing Valorant, cricket or snooker", "Scrolling through Instagram"].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-primary dark:bg-blue-400 rounded-full"></span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
-                <div className="space-y-2">
-                  <p className="font-medium text-foreground">Fun Facts:</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Grew up in Rajkot, India</li>
-                    <li>Huge fan of Harry Potter (watched whole series like &gt;30 times)</li>
-                    <li>Went to IIT Bombay to interact with better minds than me</li>
-                    <li>I am also highly enthusiast in finance. I do part time stock market also.</li>
+                <div className="space-y-3">
+                  <p className="font-medium text-foreground flex items-center gap-2">
+                    <span className="text-primary dark:text-blue-400">✨</span>
+                    Fun Facts:
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {[
+                      "Grew up in Rajkot, India",
+                      "Huge fan of Harry Potter (watched whole series like >30 times)",
+                      "Went to IIT Bombay to interact with better minds than me",
+                      "I am also highly enthusiast in finance. I do part time stock market also."
+                    ].map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-primary dark:bg-blue-400 rounded-full"></span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

@@ -1,4 +1,3 @@
-
 import ProjectCard from "@/components/ProjectCard";
 
 const Projects = () => {
@@ -6,37 +5,44 @@ const Projects = () => {
     {
       title: "Transfer Learning using Tensorflow Hub",
       description: "Implemented pre-trained NLP text embedding models like USE, NNLM, and BERT from TF Hub. Performed Transfer Learning to fine-tune 12 models, increasing its accuracy from 93% to over 97%. Utilized matplotlib and TensorBoard to visualize model accuracy, ranking USE-large highest at 97.41%.",
-      technologies: ["Natural Language Processing", "TensorFlow Hub", "Python"]
+      technologies: ["Natural Language Processing", "TensorFlow Hub", "Python"],
+      link: "https://github.com/gamechaser782/transfer-learning-tfhub"
     },
     {
       title: "Anomaly Detection in Credit Card Transactions",
       description: "Visualized the credit card dataset using pandas, seaborn, and matplotlib, conducting fraud analysis. Employed t-SNE for dimensionality reduction, confirming the feasibility of anomaly detection modeling. Compared various classification algorithms on ROC-AUC score, ranking XGBoost highest at 97.22%. Applied Gaussian anomaly detection, used autoencoder for enhanced unsupervised fraud detection.",
-      technologies: ["Predictive Modelling", "XGBoost", "Python"]
+      technologies: ["Predictive Modelling", "XGBoost", "Python"],
+      link: "https://github.com/gamechaser782/credit-card-fraud-detection"
     },
     {
       title: "Real-time Age and Gender Recognition",
       description: "Incorporated Resnet-34 architecture trained on 3M+ images with 99% accuracy for image recognition. Employed pre-trained Caffe2 models for fast and robust Age and Gender recognition on live webcam feeds. Utilized CNN based method for detection owing to its 3% accuracy boost over HOG based method.",
-      technologies: ["Computer Vision", "ResNet", "CNN"]
+      technologies: ["Computer Vision", "ResNet", "CNN"],
+      link: "https://github.com/gamechaser782/age-gender-recognition"
     },
     {
       title: "COVID19 Data Analysis",
       description: "Conducted COVID-19 EDA of 150+ countries; merged COVID-19 & Happiness data to find correlations. Created Seaborn-Matplotlib visuals, precisely illuminating nuanced infection-happiness correlations.",
-      technologies: ["Time Series Analysis", "Data Visualization", "Python"]
+      technologies: ["Time Series Analysis", "Data Visualization", "Python"],
+      link: "https://github.com/gamechaser782/covid19-analysis"
     },
     {
       title: "Object Detection with AWS Sagemaker",
       description: "Visualized 3500+ images using SageMaker, employing ImageDraw and ImageFont for object detection. Skillfully orchestrated full workflow from instance setup to model training, and visualizing predictions.",
-      technologies: ["Cloud Computing", "AWS", "Computer Vision"]
+      technologies: ["Cloud Computing", "AWS", "Computer Vision"],
+      link: "https://github.com/gamechaser782/aws-sagemaker-object-detection"
     },
     {
       title: "Stock Market Indices",
       description: "Imported FAANG companies' prices via Google Finance, constructing a weighted Stock Market index. Calculated free-float weight, enhancing index representation for accurate market performance analysis.",
-      technologies: ["Finance", "Data Analysis", "Python"]
+      technologies: ["Finance", "Data Analysis", "Python"],
+      link: "https://github.com/gamechaser782/stock-market-indices"
     },
     {
       title: "Tweet Emotion Recognition",
       description: "Retrieved emotion dataset from Hugging Face's NLP library, preprocessed tweets through tokenization. Constructed a bidirectional LSTM model, categorizing tweet emotions with a 98.18% training accuracy. Implemented early stopping for regularization, achieving 87.2% test accuracy in sentiment analysis.",
-      technologies: ["Sentiment Analysis", "LSTM", "NLP"]
+      technologies: ["Sentiment Analysis", "LSTM", "NLP"],
+      link: "https://github.com/gamechaser782/tweet-emotion-recognition"
     }
   ];
 
