@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import Blogs from "./pages/Blogs";
 import Socials from "./pages/Socials";
+import ProjectDemo from "./pages/ProjectDemo";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:projectName" element={<ProjectDemo />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/socials" element={<Socials />} />
           </Routes>

@@ -1,21 +1,25 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "./ui/card";
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  link?: string; // Optional link to project deployment
+  githubLink: string;
+  projectName: string;
 }
 
-const ProjectCard = ({ title, description, technologies, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, technologies, githubLink, projectName }: ProjectCardProps) => {
   const cardContent = (
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
-      <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer h-full">
+      <Card className="hover:shadow-lg transition-all duration-300 h-full flex flex-col">
         <CardHeader>
           <CardTitle className="text-xl">{title}</CardTitle>
           <CardDescription className="flex gap-2 flex-wrap">
@@ -29,25 +33,43 @@ const ProjectCard = ({ title, description, technologies, link }: ProjectCardProp
             ))}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-grow">
           <p className="text-muted-foreground">{description}</p>
         </CardContent>
+        <CardFooter className="flex gap-3 pt-4">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="flex-1 gap-2 group"
+            asChild
+          >
+            <a 
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              GitHub
+            </a>
+          </Button>
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="flex-1 gap-2 group"
+            asChild
+          >
+            <Link 
+              to={`/projects/${projectName}`}
+              className="flex items-center justify-center"
+            >
+              <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              Live Demo
+            </Link>
+          </Button>
+        </CardFooter>
       </Card>
     </motion.div>
   );
-
-  if (link) {
-    return (
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="block h-full"
-      >
-        {cardContent}
-      </a>
-    );
-  }
 
   return cardContent;
 };

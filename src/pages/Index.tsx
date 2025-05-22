@@ -12,7 +12,7 @@ const Index = () => {
   }, []);
   
   const techStack = [
-    "Python", "Git", "Kubernetes", "Elastic", "Docker", "MySQL", "AWS"
+    "Python", "C++", "Databases", "Cloud", "AI/ML", "Kubernetes", "Docker"
   ];
 
   if (!mounted) {
@@ -39,10 +39,6 @@ const Index = () => {
                   <p className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                     Based in Rajkot, India
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    Available for opportunities
                   </p>
                 </div>
                 <Button variant="outline" className="w-full group" asChild>
@@ -83,10 +79,6 @@ const Index = () => {
               <h2 className="text-2xl font-semibold border-b pb-2">About Me</h2>
               <div className="space-y-6 text-muted-foreground">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <p className="flex items-center gap-2">
-                    <span className="text-primary dark:text-blue-400">💻</span>
-                    I use daily: .py, .sql, .cpp
-                  </p>
                   <p className="flex items-center gap-2">
                     <span className="text-primary dark:text-blue-400">🏫</span>
                     IIT Bombay (2024)
