@@ -10,9 +10,10 @@ interface ProjectCardProps {
   technologies: string[];
   githubLink: string;
   projectName: string;
+  demoLink?: string;
 }
 
-const ProjectCard = ({ title, description, technologies, githubLink, projectName }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, technologies, githubLink, projectName, demoLink }: ProjectCardProps) => {
   const cardContent = (
     <motion.div
       whileHover={{ scale: 1.02 }}
@@ -58,13 +59,25 @@ const ProjectCard = ({ title, description, technologies, githubLink, projectName
             className="flex-1 gap-2 group"
             asChild
           >
-            <Link 
-              to={`/projects/${projectName}`}
-              className="flex items-center justify-center"
-            >
-              <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              Live Demo
-            </Link>
+            {demoLink ? (
+              <a 
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                Live Demo
+              </a>
+            ) : (
+              <Link 
+                to={`/projects/${projectName}`}
+                className="flex items-center justify-center"
+              >
+                <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                Live Demo
+              </Link>
+            )}
           </Button>
         </CardFooter>
       </Card>

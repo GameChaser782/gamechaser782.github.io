@@ -14,7 +14,8 @@ const Projects = () => {
       description: "Visualized the credit card dataset using pandas, seaborn, and matplotlib, conducting fraud analysis. Employed t-SNE for dimensionality reduction, confirming the feasibility of anomaly detection modeling. Compared various classification algorithms on ROC-AUC score, ranking XGBoost highest at 97.22%. Applied Gaussian anomaly detection, used autoencoder for enhanced unsupervised fraud detection.",
       technologies: ["Predictive Modelling", "XGBoost", "Python"],
       githubLink: "https://github.com/gamechaser782/Credit-Card-Fraud-Detection",
-      projectName: "credit-card-fraud"
+      projectName: "credit-card-fraud",
+      demoLink: "https://gamechaser782.github.io/Credit-Card-Fraud-Detection/"
     },
     {
       title: "Face Recognition using OpenCV",
