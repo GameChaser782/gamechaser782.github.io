@@ -3,6 +3,14 @@ import ProjectCard from "@/components/ProjectCard";
 const Projects = () => {
   const projects = [
     {
+      title: "Portfolio-Analyser",
+      description: "AI-powered portfolio analysis tool that evaluates investment portfolios using machine learning algorithms. Provides insights and recommendations to optimize asset allocation and maximize returns based on historical data and market trends.",
+      technologies: ["Finance", "Data Analysis", "Python", "GenAI"],
+      githubLink: "https://github.com/gamechaser782/Portfolio-Analyser",
+      projectName: "portfolio-analyser",
+      demoLink: "https://gamechaser782.github.io/Portfolio-Analyser/"
+    },
+    {
       title: "Transfer Learning using Tensorflow Hub",
       description: "Implemented pre-trained NLP text embedding models like USE, NNLM, and BERT from TF Hub. Performed Transfer Learning to fine-tune 12 models, increasing its accuracy from 93% to over 97%. Utilized matplotlib and TensorBoard to visualize model accuracy, ranking USE-large highest at 97.41%.",
       technologies: ["Natural Language Processing", "TensorFlow Hub", "Python"],
@@ -37,13 +45,6 @@ const Projects = () => {
       technologies: ["Cloud Computing", "AWS", "Computer Vision"],
       githubLink: "https://github.com/gamechaser782/Object-Detection-with-AWS-Sagemaker",
       projectName: "object-detection-aws"
-    },
-    {
-      title: "Stock Market Prediction",
-      description: "Imported FAANG companies' prices via Google Finance, constructing a weighted Stock Market index. Calculated free-float weight, enhancing index representation for accurate market performance analysis.",
-      technologies: ["Finance", "Data Analysis", "Python"],
-      githubLink: "https://github.com/gamechaser782/Stock-Market-Prediction",
-      projectName: "stock-market-prediction"
     },
     {
       title: "Tweet Emotion Recognition",

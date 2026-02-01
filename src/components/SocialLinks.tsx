@@ -13,7 +13,7 @@ const SocialLinks = () => {
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://www.linkedin.com/in/harshit-upadhyay-57573a146/",
+      href: "https://www.linkedin.com/in/harshitupadhyay782/",
       label: "LinkedIn"
     },
     {

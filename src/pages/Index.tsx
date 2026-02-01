@@ -43,7 +43,7 @@ const Index = () => {
                 </div>
                 <Button variant="outline" className="w-full group" asChild>
                   <a 
-                    href="https://docs.google.com/document/d/1j_K-Vj3oy82hYN9aO1069h7P4hs8S7Nnkvtb4JrqvX0/edit?usp=sharing" 
+                    href="https://docs.google.com/document/d/10s5NFW7kPeAuZvxi0IewBiswfqY68Hn0IqbaXVipkGY/edit?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
