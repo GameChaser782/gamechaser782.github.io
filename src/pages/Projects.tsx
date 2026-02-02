@@ -11,6 +11,14 @@ const Projects = () => {
       demoLink: "https://gamechaser782.github.io/Portfolio-Analyser/"
     },
     {
+      title: "Certificates",
+      description: "Recruiter-friendly showcase of my academic and professional certificates with filters, search, and direct PDF verification links.",
+      technologies: ["GitHub Pages", "HTML", "CSS", "JavaScript"],
+      githubLink: "https://github.com/gamechaser782/Certificates",
+      projectName: "certificates",
+      demoLink: "https://gamechaser782.github.io/Certificates/"
+    },
+    {
       title: "Transfer Learning using Tensorflow Hub",
       description: "Implemented pre-trained NLP text embedding models like USE, NNLM, and BERT from TF Hub. Performed Transfer Learning to fine-tune 12 models, increasing its accuracy from 93% to over 97%. Utilized matplotlib and TensorBoard to visualize model accuracy, ranking USE-large highest at 97.41%.",
       technologies: ["Natural Language Processing", "TensorFlow Hub", "Python"],
